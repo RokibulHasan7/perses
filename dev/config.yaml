@@ -1,30 +1,32 @@
 security:
   readonly: false
-  encryption_key: "=tW$56zytgB&3jN2E%7-+qrGZE?v6LCc"
+  encryption_key: '=tW$56zytgB&3jN2E%7-+qrGZE?v6LCc'
   enable_auth: true
   authorization:
+    kubernetes: true
     guest_permissions:
       - actions:
           - read
         scopes:
-          - "*"
+          - '*'
       - actions:
           - create
         scopes:
           - Project
   authentication:
     providers:
-      enable_native: true
+      kubernetes:
+        enabled: true
 
 database:
   file:
-    folder: "dev/local_db"
-    extension: "json"
+    folder: 'dev/local_db'
+    extension: 'json'
     case_sensitive: false
 
 provisioning:
   folders:
-    - "dev/data"
+    - 'dev/data'
 
 ephemeral_dashboard:
   enable: true
@@ -35,18 +37,18 @@ frontend:
     enable: true
 
   important_dashboards:
-    - project: "perses"
-      dashboard: "Demo"
-    - project: "perses"
-      dashboard: "NodeExporter"
-    - project: "perses"
-      dashboard: "Benchmark"
-    - project: "testing"
-      dashboard: "Defaults"
-    - project: "testing"
-      dashboard: "StatChartPanel"
-    - project: "testing"
-      dashboard: "MarkdownPanel"
+    - project: 'perses'
+      dashboard: 'Demo'
+    - project: 'perses'
+      dashboard: 'NodeExporter'
+    - project: 'perses'
+      dashboard: 'Benchmark'
+    - project: 'testing'
+      dashboard: 'Defaults'
+    - project: 'testing'
+      dashboard: 'StatChartPanel'
+    - project: 'testing'
+      dashboard: 'MarkdownPanel'
 
   information: |-
     # Hello World
